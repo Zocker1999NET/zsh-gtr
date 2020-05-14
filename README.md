@@ -85,6 +85,15 @@ EOBUNDLES
 gtr
 ```
 
+### Practical usage
+
+I use signed tags with the prefix `release-` as convenient update solution for applications and ressources on my server.
+Every night my servers look for new tags in given remote repositories.
+If a newer release tag is provided,
+the signature of the release tag will be checked against my GPG key,
+and only if the signature is considered valid,
+the server checkouts the new release tag and may runs hooks to auto update applications and servers.
+
 ## License
 
 This plugin is licensed under WTFPL.
